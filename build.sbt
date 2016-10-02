@@ -1,4 +1,4 @@
-name := """play-news"""
+name := """play-sse-demo"""
 
 version := "1.0-SNAPSHOT"
 
