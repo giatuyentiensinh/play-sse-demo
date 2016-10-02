@@ -1,0 +1,24 @@
+{
+  "name": "play-java",
+  "description": "front end",
+  "main": "index.js",
+  "authors": [
+    "tuyenng"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angularjs"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7",
+    "angular": "^1.5.8"
+  }
+}

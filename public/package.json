@@ -1,0 +1,14 @@
+{
+  "name": "play-java",
+  "version": "1.0.0",
+  "description": "front end",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "tuyenng",
+  "license": "MIT"
+}
