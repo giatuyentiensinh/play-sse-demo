@@ -1,13 +1,10 @@
 package controllers;
 
-import java.util.Date;
-
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import org.joda.time.LocalDate;
 
-import play.Logger;
 import play.libs.EventSource;
 import play.libs.EventSource.Event;
 import play.libs.Json;

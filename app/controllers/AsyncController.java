@@ -1,13 +1,18 @@
 package controllers;
 
 import akka.actor.ActorSystem;
+
 import javax.inject.*;
+
 import play.*;
 import play.mvc.*;
+
+import java.util.Map;
 import java.util.concurrent.Executor;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.TimeUnit;
+
 import scala.concurrent.duration.Duration;
 import scala.concurrent.ExecutionContextExecutor;
 
@@ -48,6 +53,12 @@ public class AsyncController extends Controller {
     }
 
     private CompletionStage<String> getFutureMessage(long time, TimeUnit timeUnit) {
+    	Map<String, String[]> headers = request().headers();
+    	System.out.println("--------------------------------");
+		Logger.info("Request: " + request());
+		headers.keySet().forEach(key -> {
+			System.out.println("key[" + key + "]: " + headers.get(key)[0]);
+		});
         CompletableFuture<String> future = new CompletableFuture<>();
         actorSystem.scheduler().scheduleOnce(
             Duration.create(time, timeUnit),

@@ -1,5 +1,3 @@
-import com.google.inject.AbstractModule;
-
 import java.time.Clock;
 
 import services.ApplicationTimer;
@@ -8,6 +6,8 @@ import services.Counter;
 import services.MyInstance;
 import services.MyService;
 import services.SSEPublisher;
+
+import com.google.inject.AbstractModule;
 
 /**
  * This class is a Guice module that tells Guice how to bind several different
@@ -32,6 +32,7 @@ public class Module extends AbstractModule {
 		bind(MyInstance.class).to(MyService.class);
 
 		bind(SSEPublisher.class).asEagerSingleton();
+//		bind(HelloActor.class).asEagerSingleton();
 	}
 
 }
